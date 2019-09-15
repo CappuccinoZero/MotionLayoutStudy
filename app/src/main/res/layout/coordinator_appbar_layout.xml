@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.motionlayoutstudy.MotionToolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layoutDescription="@xml/activity_thread_scene"
+    app:layout_scrollFlags="scroll|enterAlways|exitUntilCollapsed"
+    android:id="@+id/motionToolbar"
+    android:fitsSystemWindows="false"
+    android:minHeight="50dp"
+    android:background="#FF6E40"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/background"
+        android:background="#FF6E40"
+        android:scaleType="centerCrop"
+        android:src="@drawable/miku"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"/>
+    <TextView
+        android:transformPivotX="0dp"
+        android:transformPivotY="0dp"
+        android:textSize="32dp"
+        android:textColor="#E040FB"
+        android:id="@+id/title"
+        android:text="CappuccinoZero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</com.example.motionlayoutstudy.MotionToolbar>

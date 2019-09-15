@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Transition
+        app:constraintSetEnd="@id/four_end"
+        app:constraintSetStart="@id/four_start"
+        app:duration="1000">
+        <OnClick
+            app:clickAction="toggle"
+            app:targetId="@id/rectView"/>
+        <KeyFrameSet>
+            <KeyPosition
+                app:pathMotionArc="startVertical"
+                app:keyPositionType="parentRelative"
+                app:percentY="0.75"
+                app:framePosition="50"
+                app:motionTarget="@id/rectView"/>
+        </KeyFrameSet>
+    </Transition>
+    <ConstraintSet android:id="@+id/four_start">
+        <Constraint
+            app:pathMotionArc="startHorizontal"
+            android:elevation="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:background="#00E676"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@id/rectView"
+            android:layout_width="100dp"
+            android:layout_height="100dp">
+        </Constraint>
+    </ConstraintSet>
+    <ConstraintSet android:id="@+id/four_end">
+        <Constraint
+            android:elevation="8dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="#00E676"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@id/rectView"
+            android:layout_width="100dp"
+            android:layout_height="100dp">
+        </Constraint>
+    </ConstraintSet>
+</MotionScene>
